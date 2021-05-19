@@ -1,15 +1,23 @@
 # app_info_listener
 
-A new Flutter plugin.
+A new flutter plugin project.
 
-## Getting Started
+## 开发环境
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+- VSCode 1.56.2
+- Android Studio 4.2.1
+- Dart ">=2.12.0 <3.0.0"
+- Flutter ">=2.0.0"
+- Gradle 6.7（build_gradle:4.1.0）
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 指定 FlutterSDK 版本
 
+- VSCODE
+
+  在项目根目录下`.vscode/settings.json` 配置
+
+  ```json
+  {
+    "dart.flutterSdkPath": "E:/DevSDK/flutter2.0.6"
+  }
+  ```

@@ -45,14 +45,14 @@ class AppInfoListener {
   }
 
   /// 监听流
-  static Stream<Map<String, dynamic>> _onChanged;
+  static Stream<Map<String, dynamic>>? _onChanged;
 
   Stream get onChanged {
     if (_onChanged == null)
       _onChanged = _event
           .receiveBroadcastStream()
           .map((res) => Map<String, dynamic>.from(res));
-    return _onChanged;
+    return _onChanged!;
   }
 
   Stream<String> get onApkAdded {
@@ -60,7 +60,7 @@ class AppInfoListener {
       _onChanged = _event
           .receiveBroadcastStream()
           .map((res) => Map<String, dynamic>.from(res));
-    return _onChanged
+    return _onChanged!
         .where((event) => event["action"] == ChangedAction.ADDED)
         .map<String>((event) => event["packageName"]);
   }
@@ -70,7 +70,7 @@ class AppInfoListener {
       _onChanged = _event
           .receiveBroadcastStream()
           .map((res) => Map<String, dynamic>.from(res));
-    return _onChanged
+    return _onChanged!
         .where((event) => event["action"] == ChangedAction.REMOVED)
         .map<String>((event) => event["packageName"]);
   }
@@ -80,7 +80,7 @@ class AppInfoListener {
       _onChanged = _event
           .receiveBroadcastStream()
           .map((res) => Map<String, dynamic>.from(res));
-    return _onChanged
+    return _onChanged!
         .where((event) => event["action"] == ChangedAction.REPLACED)
         .map<String>((event) => event["packageName"]);
   }

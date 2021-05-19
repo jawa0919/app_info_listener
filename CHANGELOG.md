@@ -1,3 +1,7 @@
+## 1.0.0
+
+- Flutter2.0.0 适配空安全
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+- Flutter1.22.6 版本之前使用.
